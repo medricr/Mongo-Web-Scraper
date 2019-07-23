@@ -25,11 +25,14 @@ mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 // =======================================================
 // ROUTES
 // =======================================================
-// app.get('/', function(req,res){
-// 	res.render("index");
-// })
+app.get('/', function(req,res){
+	// res.render("index");
+	db.Article.find({}).then(function(response){
+		res.json(response);
+	})
+})
 
-app.get('/', function(req,res){ 
+app.get('/scrape', function(req,res){ 
 
 	// console.log("scrape fire");
 
