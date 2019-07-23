@@ -4,7 +4,7 @@ var exphbs = require("express-handlebars");
 var axios = require("axios");
 var cheerio = require("cheerio");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -25,13 +25,13 @@ mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 // =======================================================
 // ROUTES
 // =======================================================
-app.get('/', function(req,res){
-	res.render("index");
-})
+// app.get('/', function(req,res){
+// 	res.render("index");
+// })
 
-app.get('/scrape', function(req,res){ 
+app.get('/', function(req,res){ 
 
-	console.log("scrape fire");
+	// console.log("scrape fire");
 
 	axios.get("https://pitchfork.com/").then(function(response){
 
