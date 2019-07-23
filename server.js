@@ -28,7 +28,8 @@ mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 app.get('/', function(req,res){
 	// res.render("index");
 	db.Article.find({}).then(function(response){
-		res.json(response);
+		// res.json(response);
+		res.render("index", {articles: response})
 	})
 })
 

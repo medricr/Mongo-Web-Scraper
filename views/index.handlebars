@@ -1,5 +1,21 @@
-<ul>
-	{{#each articles}}
-		{{articles}}
-	{{/each}}
-</ul>
+<div class="container">
+
+	<header class="text-center">
+		<h1>Album Avenue</h1>
+		<p class="text-center mt-4">See and comment on the latest pitchfork album reviews</p>
+	</header>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<ul>
+				{{#each articles}}
+				<div class="card">
+					<h3>{{title}}</h3>
+					<p>{{summary}}</p>
+					<a href="https://pitchfork.com{{url}}">Read the official Pitchfork review here</a>
+				</div>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>
