@@ -9,10 +9,13 @@
 		<div class="col-sm-12">
 			<ul>
 				{{#each articles}}
-				<div class="card">
+				<div class="card mb-4 text-center">
 					<h3>{{title}}</h3>
 					<p>{{summary}}</p>
 					<a href="https://pitchfork.com{{url}}">Read the official Pitchfork review here</a>
+					<div class="text-center">
+						<button class="btn btn-primary mt-1 mb-1" style="width: 18rem">Comment</button>
+					</div>
 				</div>
 				{{/each}}
 			</ul>
